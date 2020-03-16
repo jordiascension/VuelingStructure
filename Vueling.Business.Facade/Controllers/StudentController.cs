@@ -1,11 +1,14 @@
-﻿using log4net;
-using System.Web.Http;
-using System.Web.Http.Description;
+﻿using System.Web.Http;
+using log4net;
 using Vueling.Application.Logic.Contracts;
+using Vueling.Business.Facade.Filters;
 using Vueling.Domain.Entites;
 
 namespace Vueling.Business.Facade.Controllers
 {
+    
+
+    [NotImplementedExceptionFilter]
     public class StudentController : ApiController
     {
         private readonly ILog logger = null;
@@ -13,21 +16,21 @@ namespace Vueling.Business.Facade.Controllers
 
         public StudentController()
         {
-
         }
 
         public StudentController(ILog logger, IService<Student> service)
         {
             this.logger = logger;
             this.service = service;
-
         }
 
-        [HttpGet()]
+        [HttpGet]
         public IHttpActionResult Get()
         {
-            this.logger.Debug("Error Log");
-            return Ok("Everythink is ok");
+            //throw new NotImplementedException("The method is not implemented yet");
+            logger.Debug("Error Log");
+            return Ok(service.GetAll());
+            //return Ok("Everythink is ok");
         }
     }
 }

@@ -42,6 +42,9 @@
     <Reference Include="Autofac, Version=5.1.2.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <HintPath>..\packages\Autofac.5.1.2\lib\net461\Autofac.dll</HintPath>
     </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
@@ -69,18 +72,31 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="AutofacModules\RepositoryModule.cs" />
     <Compile Include="Implementations\StudentRepositoryTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="log4net.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Vueling.Domain.Entites\Vueling.Domain.Entites.csproj">
+      <Project>{0f9f81e1-ae7d-4dfa-afe7-277978f3ec0d}</Project>
+      <Name>Vueling.Domain.Entites</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Vueling.Infrastructure.Repository\Vueling.Infrastructure.Repository.csproj">
       <Project>{0CECB4F7-B541-4A6E-B24F-ED09939F7E26}</Project>
       <Name>Vueling.Infrastructure.Repository</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Vueling.Test.Framework\Vueling.Test.Framework.csproj">
+      <Project>{927ec8b5-5bc4-42a7-8b70-220b5b47081e}</Project>
+      <Name>Vueling.Test.Framework</Name>
+    </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

@@ -34,6 +34,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5. Test Libraries", "5. Test Libraries", "{2E8657BC-D348-4251-8465-F2249EBCFEEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vueling.Test.Framework", "Vueling.Test.Framework\Vueling.Test.Framework.csproj", "{927EC8B5-5BC4-42A7-8B70-220B5B47081E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -76,6 +80,10 @@ Global
 		{731EB94B-D32C-47E6-AB0C-EF8FE4A07EB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{731EB94B-D32C-47E6-AB0C-EF8FE4A07EB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{731EB94B-D32C-47E6-AB0C-EF8FE4A07EB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{927EC8B5-5BC4-42A7-8B70-220B5B47081E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{927EC8B5-5BC4-42A7-8B70-220B5B47081E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{927EC8B5-5BC4-42A7-8B70-220B5B47081E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{927EC8B5-5BC4-42A7-8B70-220B5B47081E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -90,6 +98,7 @@ Global
 		{1CF556CA-E7EB-492F-B5CE-FAAAE5A273CF} = {029104A0-C1DD-4E5C-B15C-641DDD04762F}
 		{E03A8021-BF67-4AAD-8081-109DC74F4397} = {A8A9D95A-5704-4CD7-85B0-A4959B2BAF9F}
 		{731EB94B-D32C-47E6-AB0C-EF8FE4A07EB7} = {A8A9D95A-5704-4CD7-85B0-A4959B2BAF9F}
+		{927EC8B5-5BC4-42A7-8B70-220B5B47081E} = {2E8657BC-D348-4251-8465-F2249EBCFEEC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FD735AA9-FAB5-47A3-8297-E0E2977042C7}
