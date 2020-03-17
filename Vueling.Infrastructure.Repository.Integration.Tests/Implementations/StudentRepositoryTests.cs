@@ -9,7 +9,8 @@ using Vueling.Test.Framework;
 namespace Vueling.Infrastructure.Repository.Implementations.Unit.Tests
 {
     [TestClass()]
-    public class StudentRepositoryTests: IoCSupportedTest<RepositoryModule>
+    public class StudentRepositoryTests: 
+        IoCSupportedTest<RepositoryModule>
     {
         private IRepository<Student> repository = null;
 
@@ -42,7 +43,8 @@ namespace Vueling.Infrastructure.Repository.Implementations.Unit.Tests
         {
             List<Student> studentList = repository.GetAll();
 
-            Assert.IsTrue(studentList.Count>0,"studentList is 0 or null");       
+            Assert.IsTrue(studentList.Count==2,
+                "studentList is 0 or null");       
         }
 
         [TestMethod()]

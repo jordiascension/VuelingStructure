@@ -3,7 +3,7 @@ using Autofac.Core;
 using Autofac.Core.Registration;
 using log4net;
 
-namespace Vueling.Business.Facade.AutofacModules
+namespace Vueling.Test.Framework
 {
     public class LoggingModule : Autofac.Module
     {
