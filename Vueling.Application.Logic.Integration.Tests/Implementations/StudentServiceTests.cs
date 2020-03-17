@@ -1,16 +1,21 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Vueling.Application.Logic.Implementations;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Vueling.Test.Framework;
+using Vueling.Application.Logic.Integration.Tests.AutofacModules;
+using log4net.Config;
 
 namespace Vueling.Application.Logic.Implementations.Unit.Tests
 {
     [TestClass()]
-    public class StudentServiceTests
+    public class StudentServiceTests:
+        IoCSupportedTest<ApplicationModule>
     {
+        [ClassInitialize]
+        public static void ClassInitialize(TestContext context)
+        {
+            XmlConfigurator.Configure();
+        }
+
+
         [TestMethod()]
         public void CreateTest()
         {

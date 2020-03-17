@@ -22,16 +22,22 @@ namespace Vueling.Infrastructure.Repository.Implementations
 
         public Student Create(Student model)
         {
+            logger.Info("Create method started");
             if (model == null)
             {
                 throw new ArgumentNullException(nameof(model));
             }
-            throw new NotImplementedException();
+            
+            logger.Info("Create method finished");
+            return model;
         }
 
         public bool Delete(int id)
         {
-            throw new NotImplementedException();
+            logger.Info("Delete method started");
+
+            logger.Info("Delete method finished");
+            return true;
         }
 
         public List<Student> GetAll()
@@ -65,7 +71,14 @@ namespace Vueling.Infrastructure.Repository.Implementations
 
         public Student Update(int id, Student model)
         {
-            throw new NotImplementedException();
+            logger.Info("Update method started");
+            if (model == null)
+            {
+                throw new ArgumentNullException(nameof(model));
+            }
+
+            logger.Info("Update method finished");
+            return model;
         }
     }
 }
